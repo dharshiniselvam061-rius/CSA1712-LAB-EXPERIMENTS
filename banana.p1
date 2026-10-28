@@ -1,0 +1,12 @@
+can_get_banana :-
+    monkey(on_floor),
+    banana(on_ceiling),
+    box(in_room),
+    write('Monkey pushes the box under the banana.'), nl,
+    write('Monkey climbs onto the box.'), nl,
+    write('Monkey grabs the banana.'), nl,
+    write('Monkey gets the banana!').
+
+monkey(on_floor).
+banana(on_ceiling).
+box(in_room).
