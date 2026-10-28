@@ -1,0 +1,16 @@
+disease(diabetes).
+disease(high_bp).
+disease(obesity).
+
+diet(diabetes, 'Low sugar and high fibre food').
+diet(high_bp, 'Low salt and low fat food').
+diet(obesity, 'Low calorie food and regular exercise').
+
+suggest_diet(Disease) :-
+    diet(Disease, Recommendation),
+    write('Recommended diet: '),
+    write(Recommendation).
+
+suggest_diet(Disease) :-
+    \+ diet(Disease, _),
+    write('No diet recommendation available.').
